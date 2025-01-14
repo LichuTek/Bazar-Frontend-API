@@ -3,7 +3,7 @@
 import './globals.css'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Home, Mail, Menu, X, ShoppingBag } from 'lucide-react'
+import { Home, Menu, X, ShoppingBag, UserRound, ShoppingBasket } from 'lucide-react'
 
 export default function RootLayout({
   children,
@@ -41,13 +41,19 @@ export default function RootLayout({
               <li>
                 <Link href="/products" className="flex items-center p-3 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
                   <ShoppingBag className="mr-3" size={20} />
-                  {isMenuOpen && 'Products'}
+                  {isMenuOpen && 'Productos'}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="flex items-center p-3 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                  <Mail className="mr-3" size={20} />
-                  {isMenuOpen && 'Contact'}
+                <Link href="/clientes" className="flex items-center p-3 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
+                  <UserRound className="mr-3" size={20} />
+                  {isMenuOpen && 'Clientes'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/ventas" className="flex items-center p-3 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
+                  <ShoppingBasket className="mr-3" size={20} />
+                  {isMenuOpen && 'Ventas'}
                 </Link>
               </li>
             </ul>

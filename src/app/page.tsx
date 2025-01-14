@@ -15,8 +15,13 @@ export default function Home() {
           <h2 className="text-xl font-semibold mb-2 text-indigo-800">Clientes</h2>
           <p className="text-gray-600">En este apartado podrás gestionar los clientes del negocio modificando sus datos.</p>
         </div>
+        <div className="bg-indigo-100 p-4 rounded-lg">
+          <h2 className="text-xl font-semibold mb-2 text-indigo-800">Ventas</h2>
+          <p className="text-gray-600">En este apartado podas crear, editar y eliminar ventas asociandas a un ID de cliente.</p>
+        </div>
+        <ClientComponent />
       </div>
-      <ClientComponent />
+
     </div>
   )
 }
